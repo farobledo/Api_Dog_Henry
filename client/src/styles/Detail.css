@@ -1,0 +1,160 @@
+.divDetail{
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/pecas.jpg');
+    background-size: cover;
+    padding: 10px;
+    box-sizing: border-box;
+   
+
+}
+
+.buttonHome1{
+    color: #000000;
+    box-shadow: 0px 0px 5px 5px #f8f8f8;
+    -webkit-box-shadow: 0px 0px 5px 5px #ffffff;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transition: all 0.5s ease-in-out;
+    float: left;
+    font-size: medium;
+    margin-left: 20px;
+    margin-top: 36px;
+    height: 43px;
+    border: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.buttonHome1:hover{
+
+    color: #000000;
+    box-shadow: 0px 0px 15px 15px #434343;
+    -webkit-box-shadow: 0px 0px 15px 15px #474747;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transition: all 0.5s ease-in-out;
+    transform:scale(1.1);
+    
+}
+#home{
+    margin-left: 100px
+
+}
+
+.name{
+    color: #000000;
+   margin-right: 300px;
+   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffffff, 0 0 40px #ffffff,
+   0 0 50px #0a0a0a, 0 0 60px #050505, 0 0 70px #000000;
+ 
+}
+
+.asd{
+    display: inline-block;
+    padding: 0;
+    margin: 30px;
+    font-size: medium;
+}
+.asd li {
+    display:inline-block;
+}
+
+.image{
+    height: 80%;
+    max-height: 400px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: rgb(253, 252, 252) 0px 10px 20px, rgb(255, 253, 253) 0px 6px 6px;
+    border-radius: 8px;
+    margin-top: 50px;
+    margin-right: 250px;
+}
+
+.allTemps {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    font-size: medium;
+}
+.allTemps li {
+    display: inline;
+}
+
+.caracts{
+    color: #000000;
+    font-size: large;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 30px
+}
+
+
+p{
+    font-size: large;
+    color: #000000;
+    font-size: medium;
+    padding-bottom: 10px;
+    padding-top: 0;
+    margin-top: 5px;
+}
+.last{
+    margin-bottom: 40px;
+}
+
+.loading{
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('./searchFail.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.id{
+    background-image: linear-gradient(to top, #df89b5 0%, #bfd9fe 100%);
+    font-size: medium;
+    margin-left: 0px;
+   
+    height: 43px;
+    border: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.id:hover{
+    background-image: linear-gradient(to top, #9be15d 0%, #00e3ae 100%);
+}
+.detail{
+    margin-top: 10px;
+}
+.buttonHome3{
+    color: #f8f8f8;
+    box-shadow: 0px 0px 5px 5px #f8f8f8;
+    -webkit-box-shadow: 0px 0px 5px 5px #ffffff;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transition: all 0.5s ease-in-out;
+    border: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 80px;
+   height: 55px;
+   color: rgb(0, 0, 242);
+}
+.buttonHome3:hover{
+    color: aliceblue;
+    background-image: linear-gradient(to top, #94004c62 0%, #003176 100%);
+}
+.buttonHome4{
+    background-image: linear-gradient(to top, #df89b5 0%, #bfd9fe 100%);
+    border: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 80px;
+   height: 55px;
+   color: rgb(242, 0, 0);
+}
+.buttonHome4:hover{
+    color: rgb(255, 4, 4);
+    background-image: linear-gradient(to top, #94004c62 0%, #003176 100%);
+}
