@@ -160,7 +160,7 @@ export default function DogCreate() {
     return (
         <div className='divCreate'>
            
-            <h1 className='title2'>🐕 CREA TU PROPIA RAZA DE PERRO 🐶</h1>
+            <h1 className='title2'>🐕 CREA TU PROPIA RAZA DE DOG 🐶</h1>
             <br/>
             <form onSubmit={e => handleSubmit(e)}>
                 <div>

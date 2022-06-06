@@ -87,7 +87,7 @@ function rootReducer(state = initialState, action) {
                 dogs: sortedWeight,
             }
 
-        case 'POST_DOG':
+        case 'POST_DOGS':
             return {
                 ...state,
                 dogs: [...state.dogs, action.payload]

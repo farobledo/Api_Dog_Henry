@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+export const POST_DOGS = 'POST_DOGS';
 export const GET_DOGS = 'GET_DOGS';
 export const GET_TEMPERAMENTS = 'GET_TEMPERAMENTS';
 export const FILTER_BY_TEMPERAMENT = 'FILTER_BY_TEMPERAMENT';
@@ -77,7 +77,7 @@ export function sortByWeight(payload) {
     return async function (dispatch) {
         let data = await axios.post(`http://localhost:3001/dogs`,payload);
        return dispatch({
-            type: GET_DOGS,
+        type: POST_DOGS,
             payload: data.data,
         })
     }

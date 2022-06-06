@@ -31,6 +31,8 @@ export default function Home() {
     }
     //---------------------------------------------------------------------
 
+
+
     // Ahora voy a traerme del estado los perros cuando el componente se monta:
     useEffect(() => {
         dispatch(getDogs());
@@ -146,8 +148,8 @@ export default function Home() {
             <Paginado dogsPerPage={dogsPerPage} allDogs={allDogs.length} paginado={paginado} />
 
             <div className='container'>
-                {
-                    currentDogs.map(el => {
+                    { 
+                        currentDogs.map(el => {
 
                         return (
                             <div key={el.id} className='cardHome'>
