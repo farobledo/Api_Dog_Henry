@@ -6,6 +6,8 @@ import {
     SORT_BY_NAME,
     SORT_BY_WEIGHT,
     GET_DETAIL,
+    SEARCH_DEFAULT,
+
 } from "../actions";
 
 const initialState = {
@@ -13,6 +15,7 @@ const initialState = {
     allDogs: [],
     temperaments: [],
     detail: []
+    
 }
 
 function rootReducer(state = initialState, action) {
@@ -91,7 +94,7 @@ function rootReducer(state = initialState, action) {
             return {
                 ...state,
                 dogs: [...state.dogs, action.payload]
-                 
+
             }
 
         case GET_DETAIL:
@@ -100,9 +103,20 @@ function rootReducer(state = initialState, action) {
                 detail: action.payload,
             }
 
+
+        case SEARCH_DEFAULT:
+            return {
+                ...state,
+                dogs: state.dogs.filter(el => el.id !== action.payload)
+            }
+
+
         default:
             return state;
     }
+
 }
+
+
 
 export default rootReducer;

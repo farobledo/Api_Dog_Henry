@@ -89,9 +89,11 @@ export default function Home() {
         <div className='home'>
 
             <div className='divNB'>
+            <h1 className='titulo3'>🐶 Full stack Development Api Dog</h1>
                 <ul className='navbar'>
                     <li >
-                    <Link to='/' ><button className='elementN'><span>Salir Inicio 🐶</span></button></Link>
+                       
+                    {/* <Link to='/' ><button className='elementN'><span>Salir Inicio 🐶</span></button></Link> */}
                         <button onClick={e => { handleClick(e) }} className='elementNB' >
                             Home <GiDogHouse />
                         </button>
@@ -142,9 +144,12 @@ export default function Home() {
                 </ul>
             </div>
 
+              {/* titulo del dog y button para salir al landing page */}
 
-            <h1 className="titulo"><GiDogBowl />Dog Api <GiDogBowl /></h1>
+            <Link to={'/'} className='titulo'> Dog Salir 🐶</Link>
 
+           
+            <br /> <br /> <br /> 
             <Paginado dogsPerPage={dogsPerPage} allDogs={allDogs.length} paginado={paginado} />
 
             <div className='container'>

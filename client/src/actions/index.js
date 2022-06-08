@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 export const POST_DOGS = 'POST_DOGS';
 export const GET_DOGS = 'GET_DOGS';
 export const GET_TEMPERAMENTS = 'GET_TEMPERAMENTS';
@@ -99,10 +100,16 @@ export function getDetail(id) {
     }
 }
 
-export function searchDefault(id) {
-    return {
-        type: SEARCH_DEFAULT,
-        payload: id,
+export function searchBorrar(id) {
+    return  async function (dispatch) {
+        try {
+            let data = await axios.delete(`http://localhost:3001/dogs/${id}`);
+            return dispatch({
+                type: SEARCH_DEFAULT,
+                payload: data.data
+            })
+        } catch (err) {
+            // console.log(err)
+        }
     }
 }
-

@@ -6,17 +6,6 @@ import DogCreate from './components/DogCreate';
 import Detail from './components/Detail';
 
 
-
-// const AppWrapper = () => {
-//   const store = createStore(rootReducer);
-
-//   return (
-//     <Provider store={store}> // Set context
-//       <App /> // Now App has access to context
-//     </Provider>
-//   )
-// }
-
 function App() {
   return (
     

@@ -99,9 +99,6 @@ router.get('/temperament', async (_req, res) => {
 
 router.post('/dogs', async (req, res) => {
     let {
-       
-
-
         name = req.body.name,
         heightMin = req.body.heightMin,
         heightMax = req.body.heightMax,
@@ -129,27 +126,22 @@ router.post('/dogs', async (req, res) => {
     res.status(200).send('🐕Carrera creada con éxito 🐶')
 });
 
-// aca vamos hacer una ruta para eliminar un dog creado
+// aca borramos solo el dog creado que esta en la base de datos
 router.delete('/dogs/:raceId', async (req, res) => {
     const { raceId } = req.params;
-    const raceDeleted = await raceDeleted(raceId);
-    res.status(200).send(raceDeleted);
-});
+    const allRaces = await getAllDogs();
+    if (raceId) {
+        for (let i = 0; i < allRaces.length; i++) {
+            if (allRaces[i].id === raceId) {
+                await allRaces[i].destroy() // eliminamos el dog de la base de datos
+                return res.status(200).send('🐕Carrera eliminada con éxito 🐶');
+            }
+        }
+        res.status(404).send(`Lo siento, no tenemos una carrera con  ese ID 🤷‍♀️`);
+    }
+}
+);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                 
 module.exports = router;

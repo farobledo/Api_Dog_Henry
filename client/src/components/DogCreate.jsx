@@ -132,7 +132,7 @@ export default function DogCreate() {
         // console.log(errors);
         if (!Object.getOwnPropertyNames(errors).length && input.name && input.heightMin && input.heightMax && input.weightMin && input.weightMax && input.life_span && input.temperaments.length) {
             dispatch(postDog(input));
-            alert('Doggie created 👏');
+            alert('Dog creado con Exito 👏');
             setInput({
                 name: '',
                 heightMin: '',
