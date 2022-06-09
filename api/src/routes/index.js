@@ -127,20 +127,20 @@ router.post('/dogs', async (req, res) => {
 });
 
 // aca borramos solo el dog creado que esta en la base de datos
-router.delete('/dogs/:raceId', async (req, res) => {
-    const { raceId } = req.params;
-    const allRaces = await getAllDogs();
-    if (raceId) {
-        for (let i = 0; i < allRaces.length; i++) {
-            if (allRaces[i].id === raceId) {
-                await allRaces[i].destroy() // eliminamos el dog de la base de datos
-                return res.status(200).send('🐕Carrera eliminada con éxito 🐶');
-            }
-        }
-        res.status(404).send(`Lo siento, no tenemos una carrera con  ese ID 🤷‍♀️`);
-    }
-}
-);
+// router.delete('/dogs/:raceId', async (req, res) => {
+//     const { raceId } = req.params;
+//     const allRaces = await getAllDogs();
+//     if (raceId) {
+//         for (let i = 0; i < allRaces.length; i++) {
+//             if (allRaces[i].id === raceId) {
+//                 await allRaces[i].destroy() // eliminamos el dog de la base de datos
+//                 return res.status(200).send('🐕Carrera eliminada con éxito 🐶');
+//             }
+//         }
+//         res.status(404).send(`Lo siento, no tenemos una carrera con  ese ID 🤷‍♀️`);
+//     }
+// }
+// );
 
 
                  

@@ -1,29 +1,22 @@
 import React from "react";
-import { useState} from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getDogs } from "../actions";
 
 import { GiThrowingBall } from 'react-icons/gi';
 import '../styles/SearchBar.css';
 
-export default function SearchBar(){
+export default function SearchBar() {
 
     const dispatch = useDispatch();
     const [name, setName] = useState('');
 
-    function handleInputChange(e){
+    function handleInputChange(e) {
         setName(e.target.value);
     }
 
-         
-    //     e.preventDefault();
-    //     setName(e.target.value);
-    //     // console.log(name);
-    // }
 
-    
-
-    function handleSubmit(e){
+    function handleSubmit(e) {
         e.preventDefault();
         var found = getDogs(name);
         dispatch(found)
@@ -34,7 +27,7 @@ export default function SearchBar(){
         <>
             <input
                 type='text'
-                placeholder='Buscar por raza...' 
+                placeholder='!Buscar por raza...'
                 onChange={e => handleInputChange(e)}
                 value={name}
                 className='input'
@@ -45,7 +38,7 @@ export default function SearchBar(){
                 onClick={e => handleSubmit(e)}
                 className='fetch'
             >
-                <strong>Buscar! <GiThrowingBall/></strong>
+                <strong>Buscar! <GiThrowingBall /></strong>
             </button>
         </>
     )
